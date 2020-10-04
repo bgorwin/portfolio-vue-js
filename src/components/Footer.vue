@@ -1,26 +1,22 @@
 <template>
-  <div>
-    <v-footer dark class="align-center">
-      <v-card flat tile class="indigo lighten-1 white--text text-center justify-center">
-        <v-card-text>
-          <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
-            <v-icon size="24px">{{ icon }}</v-icon>
-          </v-btn>
-        </v-card-text>
+  <v-footer dark padless>
+    <v-card class="flex" flat tile>
+      <v-card-title class="teal">
+        <strong class="subheading">Get connected with me on social networks!</strong>
 
-        <v-card-text
-          class="white--text pt-0"
-        >Please contact me on social media, Github, or directly at contact info above</v-card-text>
+        <v-spacer></v-spacer>
 
-        <v-divider></v-divider>
+        <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
+          <v-icon size="24px">{{ icon }}</v-icon>
+        </v-btn>
+      </v-card-title>
 
-        <v-card-text class="white--text">
-          {{ new Date().getFullYear() }} —
-          <strong>Brent Gorwin</strong>
-        </v-card-text>
-      </v-card>
-    </v-footer>
-  </div>
+      <v-card-text class="py-2 white--text text-center">
+        {{ new Date().getFullYear() }} —
+        <strong>Brent Gorwin</strong>
+      </v-card-text>
+    </v-card>
+  </v-footer>
 </template>
 
 <script>
